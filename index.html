@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Motorsport Time Trial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hud">
+        <h1>Mini Motorsport: Time Trial</h1>
+        <p class="muted">Arrow keys / WASD to drive. Hit checkpoints in order to count laps.</p>
+        <div class="stats">
+          <p><strong>Money:</strong> <span id="money">0</span> cr</p>
+          <p><strong>Current Lap:</strong> <span id="lapTime">--:--.---</span></p>
+          <p><strong>Best Lap:</strong> <span id="bestLap">--:--.---</span></p>
+          <p><strong>Laps Completed:</strong> <span id="laps">0</span></p>
+          <p><strong>Last Reward:</strong> <span id="lastReward">0</span> cr</p>
+          <p><strong>Clean Lap Bonus:</strong> <span id="cleanBonus">No</span></p>
+        </div>
+
+        <h2>Upgrades</h2>
+        <div class="upgrade" data-upgrade="engine">
+          <p><strong>Engine</strong> (Acceleration) Lv.<span class="level">0</span></p>
+          <button class="buy">Buy (<span class="cost">150</span> cr)</button>
+        </div>
+        <div class="upgrade" data-upgrade="tires">
+          <p><strong>Tires</strong> (Grip) Lv.<span class="level">0</span></p>
+          <button class="buy">Buy (<span class="cost">120</span> cr)</button>
+        </div>
+        <div class="upgrade" data-upgrade="brakes">
+          <p><strong>Brakes</strong> (Stability) Lv.<span class="level">0</span></p>
+          <button class="buy">Buy (<span class="cost">130</span> cr)</button>
+        </div>
+
+        <p id="message" class="message">Complete a clean lap for a bonus payout.</p>
+      </section>
+      <section class="track-wrap">
+        <canvas id="game" width="920" height="620" aria-label="Racing game canvas"></canvas>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
